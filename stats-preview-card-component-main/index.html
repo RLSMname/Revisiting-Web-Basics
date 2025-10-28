@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="insights">
+        <div class="content">
+          <div class="description">
+            <h1 class="title">
+              Get <span class="text-accent">insights</span> that help your
+              business grow.
+            </h1>
+            <p>
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+          </div>
+          <ul class="metrics">
+            <li class="metrics__item">
+              <span class="bold">10k+</span>
+              <span class="uppercase">companies</span>
+            </li>
+            <li class="metrics__item">
+              <span class="bold">314</span>
+              <span class="uppercase">templates</span>
+            </li>
+            <li class="metrics__item">
+              <span class="bold">12m+</span>
+              <span class="uppercase">queries</span>
+            </li>
+          </ul>
+        </div>
+        <div class="decoration">
+          <picture>
+            <source
+              media="(min-width: 650px)"
+              srcset="images/image-header-desktop.jpg"
+            />
+            <img src="images/image-header-mobile.jpg" alt="" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

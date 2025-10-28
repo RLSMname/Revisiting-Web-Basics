@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+:root {
+  --clr-primary: hsl(25, 97%, 53%);
+  --clr-background: hsl(30, 13%, 3%);
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-grey-500: hsl(217, 12%, 63%);
+  --clr-grey-900: hsl(219, 18%, 19%);
+  --clr-grey-950: hsl(217, 27%, 10%);
+
+  --fs-regular: 1rem;
+  --fs-heading: 1.5rem;
+
+  --ff-regular: "Overpass";
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+html,
+body,
+.main {
+  height: 100%;
+}
+
+body {
+  color: var(--clr-grey-500);
+  font-size: var(--fs-regular);
+  font-family: var(--ff-regular);
+  font-weight: var(--fw-regular);
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  background-color: var(--clr-background);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background: black;
+  background: linear-gradient(var(--clr-grey-900), var(--clr-grey-950));
+  display: grid;
+  gap: 1.75em;
+  max-width: 25rem;
+  margin-inline: 1em;
+  padding: 2em 1.75em;
+  border-radius: 20px;
+}
+
+.card--thank {
+  justify-items: center;
+  padding-block: 2.5em;
+}
+
+.text-content {
+  display: grid;
+  gap: 1.2em;
+  line-height: 1.5;
+}
+
+.text-content__title {
+  color: var(--clr-white);
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-bold);
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.round {
+  border-radius: 50%;
+  padding: 1em;
+  background-color: var(--clr-grey-900);
+}
+
+.rating__btn {
+  border: none;
+  color: var(--clr-grey-500);
+  padding: 1em 1.4em;
+  transition: background-color 0.3s ease-out, color 0.1s ease-out;
+}
+
+.rating__btn:hover,
+.rating__btn:focus-visible {
+  font-weight: var(--fw-bold);
+  color: var(--clr-grey-950);
+  background-color: var(--clr-primary);
+}
+
+.submit {
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-primary);
+  padding: 0.75em 0;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-out;
+}
+
+.submit:hover,
+.submit:focus-visible {
+  background-color: var(--clr-white);
+}
+
+.submit:disabled {
+  background-color: var(--clr-grey-900);
+}
+
+.selected {
+  color: var(--clr-grey-950);
+  background-color: var(--clr-white);
+}
+
+.rating-display {
+  width: fit-content;
+  color: var(--clr-primary);
+  background-color: var(--clr-grey-950);
+  padding: 0.5em 1em;
+  border-radius: 50px;
+}
+
+.hidden {
+  display: none;
+}

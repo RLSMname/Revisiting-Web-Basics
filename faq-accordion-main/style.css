@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+button {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-size: inherit;
+}
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 400 700;
+  src: url("/assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-purple-100: hsl(275, 100%, 97%);
+  --clr-purple-600: hsl(292, 16%, 49%);
+  --clr-purple-950: hsl(292, 42%, 14%);
+
+  --fs-regular: 1rem;
+  --fs-large: 3.5rem;
+
+  --ff: "Work Sans";
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
+html,
+body {
+  height: 100dvh;
+  height: 100vh;
+}
+
+body {
+  color: var(--clr-purple-950);
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff);
+}
+
+.main {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-purple-100);
+}
+
+.bg-img {
+  position: fixed;
+  top: -1px;
+  width: 100%;
+}
+
+.card {
+  z-index: 1;
+  width: 35rem;
+  background-color: var(--clr-white);
+  border-radius: 30px;
+  padding: 3em 2.5em;
+  box-shadow: 0px 5px 30px var(--clr-purple-600);
+
+  display: grid;
+  gap: 2.8em;
+}
+
+.card__header {
+  display: flex;
+  gap: 1.75em;
+}
+
+.card__content {
+  display: grid;
+  gap: 1em;
+}
+
+.tile {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+  /* border: 1px solid black; */
+  align-items: center;
+}
+
+.title {
+  color: var(--clr-purple-950);
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+}
+
+.star {
+  width: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.tile {
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-purple-950);
+  font-size: var(--fs-regular);
+  transition: color 0.5s ease-out;
+}
+
+.answer {
+  color: var(--clr-purple-600);
+}
+
+.tile:hover,
+.tile:focus {
+  cursor: pointer;
+  color: var(--clr-purple-600);
+}
+
+.question-container:hover {
+  cursor: click;
+}

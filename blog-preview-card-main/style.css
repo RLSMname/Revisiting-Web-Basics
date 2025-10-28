@@ -1,0 +1,145 @@
+/*
+ - Family: [Figtree](https://fonts.google.com/specimen/Figtree)
+- Weights: 500, 800
+*/
+@font-face {
+  font-family: "Figtree";
+  font-weight: 500 800;
+  src: local("Figtree"),
+    url("/assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-gray-950: hsl(0, 0%, 7%);
+
+  --ff-base: "Figtree";
+  --fw-regular: 500;
+  --fw-bold: 800;
+
+  --fs-large: 1.6rem;
+  --fs-regular: 1rem;
+  --fs-small: 0.9rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-base);
+  line-height: 1.5;
+
+  color: var(--clr-gray-500);
+}
+
+main {
+  height: 100%;
+  background-color: var(--clr-yellow);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--clr-white);
+  padding: 1.5em;
+  border: 1px solid var(--clr-gray-950);
+  border-radius: 20px;
+  box-shadow: 10px 10px var(--clr-gray-950);
+
+  max-width: 24rem;
+
+  display: grid;
+  gap: 1.2em;
+}
+
+/* @media screen and (max-width: 1200px) {
+  .card {
+    max-width: 30%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    max-width: 70%;
+  }
+} */
+
+.card__illustration {
+  border-radius: 15px;
+  align-self: center;
+}
+
+.card__metadata {
+  font-size: var(--fs-small);
+  color: var(--clr-gray-950);
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1em;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3em 1em;
+  background-color: var(--clr-yellow);
+  border-radius: 5px;
+  font-weight: var(--fw-bold);
+}
+
+.card__title {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+  color: var(--clr-gray-950);
+}
+
+.card__title:hover {
+  color: var(--clr-yellow);
+  cursor: pointer;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  height: 40px;
+}
+
+.card__author p {
+  color: var(--clr-gray-950);
+  font-weight: var(--fw-bold);
+}
