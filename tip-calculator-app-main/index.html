@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Tip calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>spli <span style="display: block">tter</span></h1>
+      <div class="tip-card">
+        <div class="content">
+          <div class="form-group">
+            <label for="bill" class="label">Bill</label>
+            <input
+              type="number"
+              class="icon"
+              id="bill"
+              name="bill"
+              placeholder="0"
+              required
+            />
+          </div>
+          <div class="button-group">
+            <p class="label">Select Tip %</p>
+            <div class="button-group__container">
+              <button class="btn btn--tip" data-percent="5">5%</button>
+              <button class="btn btn--tip" data-percent="10">10%</button>
+              <button class="btn btn--tip" data-percent="15">15%</button>
+              <button class="btn btn--tip" data-percent="25">25%</button>
+              <button class="btn btn--tip" data-percent="50">50%</button>
+              <input
+                type="number"
+                class="button-group__input"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="people" class="label"> Number of People</label>
+            <input
+              type="number"
+              class="icon icon--person"
+              id="people"
+              name="people"
+              placeholder="0"
+              required
+            />
+          </div>
+        </div>
+        <div class="result">
+          <div class="tile">
+            <div class="tile__container">
+              <div class="tile__title">Tip Amount</div>
+              <div class="tile__subtitle">/ person</div>
+            </div>
+            <p class="tile__amount" id="tip">$0.00</p>
+          </div>
+          <div class="tile">
+            <div class="tile__container">
+              <div class="tile__title">Total</div>
+              <div class="tile__subtitle">/ person</div>
+            </div>
+            <p class="tile__amount" id="total">$0.00</p>
+          </div>
+          <button class="reset btn btn--light btn--disabled">Reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
