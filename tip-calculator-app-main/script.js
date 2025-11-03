@@ -33,14 +33,14 @@ function formatNumber(num) {
 }
 
 function recalculateAmounts() {
-  //   console.log(
-  //     "billAmount=",
-  //     billAmount,
-  //     "noOfPeople=",
-  //     noOfPeople,
-  //     "tipPercent=",
-  //     tipPercent
-  //   );
+  // console.log(
+  //   "billAmount=",
+  //   billAmount,
+  //   "noOfPeople=",
+  //   noOfPeople,
+  //   "tipPercent=",
+  //   tipPercent
+  // );
   if (noOfPeople) {
     const perPerson = billAmount / noOfPeople;
     tipAmount = perPerson * tipPercent;
@@ -52,10 +52,9 @@ function updateResults() {
   //   console.log("tipAmount=", tipAmount);
   //   console.log("totalAmount=", totalAmount);
 
-  tipDisplay.textContent = "$" + formatNumber(tipAmount);
-  totalDisplay.textContent = "$" + formatNumber(totalAmount);
-
   if (noOfPeople) {
+    tipDisplay.textContent = "$" + formatNumber(tipAmount);
+    totalDisplay.textContent = "$" + formatNumber(totalAmount);
     activateReset();
   }
 }
@@ -94,6 +93,7 @@ function resetFields() {
 
   tipInput.classList.remove("custom--light");
   tipInput.value = "";
+  tipPercent = 0;
 
   tipDisplay.textContent = "$0.00";
   totalDisplay.textContent = "$0.00";
@@ -116,6 +116,10 @@ function manageTipInput() {
   selectedBtn = null;
 
   this.classList.add("custom--light");
+
+  if (this.value < 0) {
+    this.value = 0;
+  }
 
   updateTip(this.value);
 }
